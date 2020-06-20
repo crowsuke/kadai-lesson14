@@ -50,6 +50,7 @@ public class EmployeesCreateServlet extends HttpServlet {
                             (String)this.getServletContext().getAttribute("salt")
                             )
                     );
+            e.setDivision(request.getParameter("division"));
             e.setAdmin_flag(Integer.parseInt(request.getParameter("admin_flag")));
 
             Timestamp currentTime = new Timestamp(System.currentTimeMillis());
