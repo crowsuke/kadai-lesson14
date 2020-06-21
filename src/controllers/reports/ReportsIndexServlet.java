@@ -45,11 +45,12 @@ public class ReportsIndexServlet extends HttpServlet {
         } catch(Exception e) {
             page = 1;
         }
+
         List<Report> reports = em.createNamedQuery("getMyDivisionReports", Report.class)
-                                  .setParameter("division", login_employee.getDivision())
-                                  .setFirstResult(15 * (page - 1))
-                                  .setMaxResults(15)
-                                  .getResultList();
+                               .setParameter("division", login_employee.getDivision())
+                               .setFirstResult(15 * (page - 1))
+                               .setMaxResults(15)
+                               .getResultList();
 
         long reports_count = (long)em.createNamedQuery("getMyDivisionReportCount", Long.class)
                                      .setParameter("division", login_employee.getDivision())
