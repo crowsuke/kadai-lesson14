@@ -19,7 +19,7 @@
                         </tr>
                          <tr>
                             <th>部署</th>
-                            <td><c:out value="${report.employee.division}" /></td>
+                            <td><c:out value="${report.division}" /></td>
                         </tr>
                         <tr>
                             <th>内容</th>
