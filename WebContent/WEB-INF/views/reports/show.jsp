@@ -17,6 +17,10 @@
                             <th>日付</th>
                             <td><fmt:formatDate value="${report.report_date}" pattern="yyyy-MM-dd" /></td>
                         </tr>
+                         <tr>
+                            <th>部署</th>
+                            <td><c:out value="${report.employee.division}" /></td>
+                        </tr>
                         <tr>
                             <th>内容</th>
                             <td>

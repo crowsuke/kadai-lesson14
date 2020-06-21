@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import models.Employee;
 import models.Report;
 import models.validators.ReportValidator;
 import utils.DBUtil;
@@ -44,6 +45,7 @@ public class ReportsUpdateServlet extends HttpServlet {
 
             r.setReport_date(Date.valueOf(request.getParameter("report_date")));
             r.setTitle(request.getParameter("title"));
+            r.setDivision(((Employee)request.getSession().getAttribute("login_employee")).getDivision());
             r.setContent(request.getParameter("content"));
             r.setUpdated_at(new Timestamp(System.currentTimeMillis()));
 

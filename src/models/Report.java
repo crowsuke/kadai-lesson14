@@ -51,6 +51,9 @@ public class Report {
     @Column(name = "title", length = 255, nullable = false)
     private String title;
 
+    @Column(name = "division", length = 255, nullable = false)
+    private String division;
+
     @Lob
     @Column(name = "content", nullable = false)
     private String content;
@@ -91,6 +94,14 @@ public class Report {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getDivision() {
+        return division;
+    }
+
+    public void setDivision(String division) {
+        this.division = division;
     }
 
     public String getContent() {
